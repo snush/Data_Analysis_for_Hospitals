@@ -1,0 +1,4 @@
+numpy==1.19.3
+pandas
+matplotlib
+https://github.com/hyperskill/hs-test-python/archive/release.tar.gz

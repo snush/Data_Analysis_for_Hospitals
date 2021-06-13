@@ -1,0 +1,48 @@
+<h2>Description</h2>
+
+<p>Hooray, you have the datasets! However, they are somewhat difficult to work with. They are divided into three parts, and the column names are different: <code class="java">HOSPITAL</code> and <code class="java">Sex</code> in the prenatal, <code class="java">Hospital</code> and <code class="java">Male/female</code> in the sports facility. We cannot study our data in full and perform statistical calculations. It also stands in the way of good visualization.</p>
+
+<p>In this stage, we will change the column names and merge our datasets into one. To combine the columns, use the <code class="java">concat</code> function and the <code class="java">ignore_index = True</code> parameter. After merging, a side <code class="java">Unnamed: 0</code> column will appear. This column contains the indexes of the tables. This column is not needed for the practical purposes of this project, so we will delete it in this stage.</p>
+
+<h2>Objectives</h2>
+
+<p>The first step is the same as in the first stage. The second stage requires completing the following steps:</p>
+
+<ol>
+	<li>Read 3 CSV files with datasets.</li>
+	<li>Change the column names. All column names in the sports and prenatal tables must match the column names in the general table.</li>
+	<li>Merge the data frames into one. Use the <code class="java">ignore_index = True</code> parameter and the following order: <code class="java">general</code>, <code class="java">prenatal</code>, <code class="java">sports</code>.</li>
+	<li>Delete the <code class="java">Unnamed: 0</code> column.</li>
+	<li>Print the first 20 rows of the resulting data frame.</li>
+</ol>
+
+<p>If you have corrupted CSV files, please <a target="_blank" href="https://stepik.org/media/attachments/lesson/467509/files.zip" rel="noopener noreferrer nofollow">download them</a> and unzip in your working directory.</p>
+
+<h2>Example</h2>
+
+<p>The input is 3 CSV files, <code class="java">test/general.csv</code>, <code class="java">test/prenatal.csv</code>, and <code class="java">test/sports.csv</code>.</p>
+
+<p>The output is the following:</p>
+
+<pre><code class="language-no-highlight"> hospital gender   age  height  weight  ...  ultrasound  mri xray children months
+0   general    man  33.0    1.64    66.0  ...         NaN  NaN  NaN      NaN    NaN
+1   general    man  48.0    1.93   106.0  ...           t  NaN  NaN      NaN    NaN
+2   general  woman  23.0    1.54    63.0  ...         NaN  NaN  NaN      NaN    NaN
+3   general    man  27.0    1.94   103.0  ...           t  NaN  NaN      NaN    NaN
+4   general  woman  22.0    1.76    74.0  ...         NaN  NaN    f      NaN    NaN
+5   general    man  46.0    1.90    96.0  ...         NaN  NaN  NaN      NaN    NaN
+6   general  woman  68.0    1.80    85.0  ...           f  NaN  NaN      NaN    NaN
+7   general    man  35.0    1.57    61.0  ...         NaN  NaN  NaN      NaN    NaN
+8   general  woman  50.0    1.86    86.0  ...         NaN  NaN    f      NaN    NaN
+9   general    man  25.0    1.79    82.0  ...         NaN  NaN  NaN      NaN    NaN
+10  general    man  27.0    1.85    86.0  ...         NaN  NaN  NaN      NaN    NaN
+11  general    man  57.0    1.86    95.0  ...           f  NaN  NaN      NaN    NaN
+12  general    man  29.0    1.88   100.0  ...         NaN  NaN    f      NaN    NaN
+13  general  woman  18.0    1.70    80.0  ...         NaN  NaN  NaN      NaN    NaN
+14  general  woman  47.0    1.80    83.0  ...           f  NaN  NaN      NaN    NaN
+15  general  woman  51.0    1.87   103.0  ...         NaN  NaN  NaN      NaN    NaN
+16  general  woman  56.0    1.56    57.0  ...         NaN  NaN    t      NaN    NaN
+17  general  woman  38.0    1.62    71.0  ...         NaN  NaN  NaN      NaN    NaN
+18  general  woman  32.0    1.72    77.0  ...         NaN  NaN  NaN      NaN    NaN
+19  general  woman  69.0    1.72    80.0  ...         NaN  NaN    f      NaN    NaN
+</code></pre>
